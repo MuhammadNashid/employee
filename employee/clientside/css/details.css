@@ -1,0 +1,101 @@
+body {
+    background: gray; 
+    height: 20cm;
+    margin: 0 auto;
+  }
+
+page {
+    
+    background: black;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+page[size="A4"]{  
+    width: 21cm;
+    height: 18cm; 
+}
+
+@page {
+    size: 21cm 29.7cm;
+    margin: 0mm;
+}
+.container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 680px;
+}
+.leftPanel {
+    width: 35%;
+    background-color: #686565;
+    padding: 0.7cm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rightPanel {
+    width: 73%;
+    padding: 0.7cm;
+}
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 0.15cm solid gray;
+}
+
+  /* RIGHTPANEL */
+h1 { 
+    font-weight: 300; 
+    font-size: 1.2cm;
+    transform:scale(1,1.15); 
+    text-transform: uppercase; 
+    font-family: 'Julius Sans One', sans-serif;
+}
+.h2{
+    color: whitesmoke;
+}
+h3{
+    font-family: 'Open Sans', sans-serif;
+}
+.txt{
+    margin: 10px;
+    width: 300px;
+    height: 20px;
+    outline: 0;
+    border: 1px solid black;
+}
+.detail{
+    outline: 0;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    color: rgb(253, 242, 242);
+    background-color: rgb(14, 15, 14);
+    border: 1px solid rgb(223, 199, 199);
+    border-radius: 10px;
+}
+.btn1{
+    width: 100px;
+    height: 40px;
+    color: rgb(253, 242, 242);
+    background-color: rgb(21, 33, 206);
+    border: 1px solid rgb(223, 199, 199);
+    border-radius: 10px;
+}
+.btn2{
+    width: 100px;
+    height: 40px;
+    color: rgb(253, 242, 242);
+    background-color: rgb(110, 2, 2);
+    border: 1px solid rgb(223, 199, 199);
+    border-radius: 10px;
+}
+h2{
+    text-align: center;
+    color: rgb(36, 4, 66);
+}

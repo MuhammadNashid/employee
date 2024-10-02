@@ -1,0 +1,48 @@
+body{
+    background-color: grey;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+      
+.title{
+    color: grey;
+    font-size: 18px;
+}
+      
+button{
+    border: none;
+    outline: 0;
+    padding: 8px;  
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+button>a{
+    text-decoration: none;
+    color: white;
+}
+.emp{
+    float: right;
+    width: 100px;
+    height: 50px;
+    background-color: seagreen;
+    border: 0;
+    outline: 0;
+    box-shadow: 2px 1px rgb(65, 63, 63);
+    border-radius: 15px;
+}
+.emp>a{
+    text-decoration: none;
+    color: whitesmoke;
+}
