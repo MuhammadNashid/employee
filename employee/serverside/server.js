@@ -64,6 +64,11 @@ const app=http.createServer(async(req,res)=>{
         res.end(fs.readFileSync("../clientside/js/add.js"))
     }
 
+
+    if(path.pathname=="/submit"&&req.method=="post"){
+        
+    }
+
     // else if(path.pathname=="/submit"&&req.method=="post"){
     //     // console.log("hai");
     //     let body="";
