@@ -25,9 +25,11 @@ async function employees(params) {
 }
 employees()
  function handleEdit(id){
+  document.getElementById(`emp-id-${id}`).disabled=false
     document.getElementById(`name-${id}`).disabled=false
     document.getElementById(`email-${id}`).disabled=false
     document.getElementById(`phone-${id}`).disabled=false
-    document.getElementById(`blood-${id}`).disabled=false
-    document.getElementById(`gender-${id}`).disabled=false
+    document.getElementById(`des-${id}`).disabled=false
+    document.getElementById(`salary-${id}`).disabled=false
+    document.getElementById(`details-${id}`).disabled=false
  }

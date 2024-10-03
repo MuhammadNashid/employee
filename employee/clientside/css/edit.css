@@ -11,7 +11,7 @@ h2{
    text-align: center;
    border: 2px solid rgb(122, 118, 118);
    width: 500px;
-   margin-left: 600px;
+   margin-left: 700px;
    margin-top: 80px;
    box-shadow: 2px 2px rgb(78, 73, 73);
    background-color: rgb(170, 156, 140);
@@ -22,7 +22,7 @@ h2{
    
     background-color: rgb(12, 74, 85);
     border: 0;
-    box-shadow: 2px 2px rgb(114, 113, 113);
+    box-shadow:0 2px 3px white;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -54,7 +54,7 @@ td{
     background-color: rgb(14, 15, 14);
     border: 0;
     border-radius: 10px;
-    box-shadow: 3px 3px white;
+    box-shadow:0 2px 3px white;
 }
 .btn1>a{
     text-decoration: none;

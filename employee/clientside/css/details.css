@@ -5,8 +5,8 @@ body {
   }
 
 page {
-    box-shadow: 0 2px 2px lightgoldenrodyellow;
-    background: black;
+    box-shadow: 0 2px 2px rgb(185, 185, 178);
+    background: rgb(194, 175, 153);
     display: block;
     margin: 0 auto;
     position: relative;
@@ -30,7 +30,7 @@ page[size="A4"]{
 }
 .leftPanel {
     width: 35%;
-    background-color: #686565;
+    background-color: rgb(43, 10, 10);
     padding: 0.7cm;
     display: flex;
     flex-direction: column;
@@ -56,7 +56,8 @@ h1 {
     font-family: 'Julius Sans One', sans-serif;
 }
 .h2{
-    color: whitesmoke;
+    color: indianred;
+    text-decoration-line: underline;
 }
 h3{
     font-family: 'Open Sans', sans-serif;
@@ -74,26 +75,26 @@ h3{
 .btn{
     width: 100px;
     height: 40px;
-    color: rgb(253, 242, 242);
     background-color: rgb(14, 15, 14);
-    border: 1px solid rgb(223, 199, 199);
+    border: 0;
+    box-shadow: 2px 2px gray;
     border-radius: 10px;
+}
+.btn>a{
+    text-decoration: none;
+    color: rgb(253, 242, 242);
 }
 .btn1{
     width: 100px;
     height: 40px;
-    color: rgb(253, 242, 242);
     background-color: rgb(21, 33, 206);
-    border: 1px solid rgb(223, 199, 199);
+    border: 0;
+    box-shadow: 2px 2px gray;
     border-radius: 10px;
 }
-.btn2{
-    width: 100px;
-    height: 40px;
+.btn1>a{
+    text-decoration: none;
     color: rgb(253, 242, 242);
-    background-color: rgb(110, 2, 2);
-    border: 1px solid rgb(223, 199, 199);
-    border-radius: 10px;
 }
 h2{
     text-align: center;
