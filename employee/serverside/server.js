@@ -63,36 +63,37 @@ const app=http.createServer(async(req,res)=>{
         res.writeHead(200,{"Content-Type":"text/js"})
         res.end(fs.readFileSync("../clientside/js/add.js"))
     }
-    else if(path.pathname=="/submit"&&req.method=="post"){
-        // console.log("hai");
-        let body="";
-        req.on("data",(chunks)=>{
-            console.log(chunks);
-            body+=chunks.toString();
-            console.log(body);
-        })
+
+    // else if(path.pathname=="/submit"&&req.method=="post"){
+    //     // console.log("hai");
+    //     let body="";
+    //     req.on("data",(chunks)=>{
+    //         console.log(chunks);
+    //         body+=chunks.toString();
+    //         console.log(body);
+    //     })
     
-        req.on("end",async()=>{
-            if(body!==null){
-                const formData=queryString.parse(body);
-                console.log(formData);
-                collection.insertOne(formData).then(()=>{
-                    console.log("data added");   
-                }).catch((error)=>{
-                    console.log(error); 
-                })
-                res.writeHead(200,{"Content-Type":"text/html"})
-                res.end(fs.readFileSync("../clientside/pages/index.html")) 
-            }
-        })
-    }
-    if(path.pathname=='/employees'&&req.method=="GET"){
-        const data= await collection.find().toArray();
-        const json_data=JSON.stringify(data)
-        console.log(json_data);
-        res.writeHead(200,{"Content-Type":"text/json"})
-        res.end(json_data)  
-    }
+    //     req.on("end",async()=>{
+    //         if(body!==null){
+    //             const formData=queryString.parse(body);
+    //             console.log(formData);
+    //             collection.insertOne(formData).then(()=>{
+    //                 console.log("data added");   
+    //             }).catch((error)=>{
+    //                 console.log(error); 
+    //             })
+    //             res.writeHead(200,{"Content-Type":"text/html"})
+    //             res.end(fs.readFileSync("../clientside/pages/index.html")) 
+    //         }
+    //     })
+    // }
+    // if(path.pathname=='/employees'&&req.method=="GET"){
+    //     const data= await collection.find().toArray();
+    //     const json_data=JSON.stringify(data)
+    //     console.log(json_data);
+    //     res.writeHead(200,{"Content-Type":"text/json"})
+    //     res.end(json_data)  
+    // }
 })
 
  
