@@ -6,7 +6,7 @@ h1{
     color: black;
 }
 .card{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow:0 2px 4px lightblue;
     max-width: 300px;
     margin: auto;
     text-align: center;
@@ -14,7 +14,7 @@ h1{
 }
       
 .title{
-    color: grey;
+    color: bisque;
     font-size: 18px;
 }
       

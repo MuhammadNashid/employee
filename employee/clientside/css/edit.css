@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(151, 150, 150);
+}
+h2{
+    text-decoration-line: underline;
+    color: rgb(60, 14, 104);
+    margin-left: 750px;
+}
+
+.detail{
+   text-align: center;
+   border: 2px solid rgb(122, 118, 118);
+   width: 500px;
+   margin-left: 600px;
+   margin-top: 80px;
+   box-shadow: 2px 2px rgb(78, 73, 73);
+   background-color: rgb(170, 156, 140);
+}
+.btn{
+    width: 100px;
+    height: 40px;
+   
+    background-color: rgb(12, 74, 85);
+    border: 0;
+    box-shadow: 2px 2px rgb(114, 113, 113);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.btn>a{
+    text-decoration: none;
+    color: rgb(253, 242, 242);
+}
+.txt{
+    background-color: rgb(221, 223, 224);
+    margin: 10px;
+    width: 250px;
+    height: 30px;
+    border: 0;
+}
+.txt1{
+    background-color: rgb(221, 223, 224);
+    margin: 10px;
+    width: 290px;
+    height: 80px;
+    border: 0;
+}
+td{
+    margin-top: 10px;
+}
+.btn1{
+    width: 100px;
+    height: 40px;
+    color: rgb(253, 242, 242);
+    background-color: rgb(14, 15, 14);
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px white;
+}
+.btn1>a{
+    text-decoration: none;
+    color: rgb(253, 242, 242);
+}

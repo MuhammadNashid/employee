@@ -5,7 +5,7 @@ body {
   }
 
 page {
-    
+    box-shadow: 0 2px 2px lightgoldenrodyellow;
     background: black;
     display: block;
     margin: 0 auto;

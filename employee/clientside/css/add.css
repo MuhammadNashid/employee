@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(219, 217, 214);
+}
+.main1{
+    /* margin: 40px 100px; */
+   align-items: center;
+   gap: 10px;
+}
+h1{
+    
+    text-align: center;
+    color: brown;
+    margin-top: 100px;
+}
+.txt{
+    width: 250px;
+    height: 40px;
+    border: 1px solid rgb(223, 199, 199);
+    border-radius: 10px;
+   margin-top: 50px;
+}
+.btn{
+   
+    width: 100px;
+    height: 40px;
+    color: rgb(253, 242, 242);
+    background-color: rgb(14, 43, 202);
+    border: 1px solid rgb(223, 199, 199);
+    border-radius: 10px;
+    margin-left: 850px;
+    margin-top: 10px;
+}
