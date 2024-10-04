@@ -20,36 +20,36 @@
                   <div class="detail">
                     <h2 class="h2">INFORMATION</h2>
                     <form action="">
-                <td>EID:</td><br>
-                <td><input type="text" class="txt" id="EID" placeholder="Employee id"></td><br>
-               </tr>
-               <tr>
-                <td>NAME:</td><br>
-                <td><input type="text" class="txt" id="NAME" placeholder="Name"></td><br>
-               </tr>
-               <tr>
-                <td>DES:</td><br>
-                <td><input type="text" class="txt" id="DES" placeholder="Designation"></td><br>
-               </tr>
-               <tr>
-                <td>PHONE:</td><br>
-                <td><input type="text" class="txt" id="PHONE" placeholder="Phone number"></td><br>
-               </tr>
-               <tr>
-                <td>EMAIL:</td><br>
-                <td><input type="text" class="txt" id="EMAIL" placeholder="Email ID"></td><br>
-               </tr>
-               <tr>
-                <td>SALARY:</td><br>
-                <td><input type="text" class="txt" id="SALARY" placeholder="Salay"></td><br>
-               </tr>
-               <tr>
-                <td>DETAILS:</td><br>
-                <td><textarea name=""  class="detail" id="DETAILS" cols="30" rows="5"></textarea></td>
-               </tr></div><br><br>
+                <div>EID:</div>
+                <div><input type="text" class="txt" id="EID" placeholder="Employee id"></div>
+               
+                <div>NAME:</div>
+                <input type="text" class="txt" id="NAME" placeholder="Name">
+          
+               
+                <div>DES:</div>
+                <input type="text" class="txt" id="DES" placeholder="Designation">
+             
+              
+                <div>PHONE:</div>
+                <input type="text" class="txt" id="PHONE" placeholder="Phone number">
+               
+              
+                <div>EMAIL:</div>
+                <input type="text" class="txt" id="EMAIL" placeholder="Email ID">
+               
+               
+                <div>SALARY:</div>
+                <input type="text" class="txt" id="SALARY" placeholder="Salary">
+             
+            
+                <div>EXPERIENCE:</div>
+                <input type="text" class="exp" id="EXP" placeholder="EXPERIENCE">
+               </div>
                <div class="button">
-                <button type="submit" class="btn"><a href="http://localhost:3000/">BACK</a></button>
-               <button type="submit" class="btn1"><a href="http://localhost:3000/add">SUBMIT</a></button>
+                <button type="submit" class="btn"  onclick="goBack()">BACK</button>
+               <button type="submit" class="btn1" onclick="editEployee()">EDIT</button>
+               <button type="submit" class="btn2" onclick="showconfirmBox()">DELETE</button>
                
           </div>
         </form>
@@ -58,6 +58,14 @@
 
 
 
+      <div id="dlt"></div>
+        <div id="cf-bx">
+            <p>Are you sure you want to delete this employee?</p>
+            <div class="confirm-buttons">
+                <button class="yesbtn" onclick="confirmDelete()">Yes</button>
+                <button class="nobtn" onclick="cancelDelete()">No</button>
+            </div>
+        </div>
 
 
 
@@ -66,6 +74,9 @@
 
 
 
-    <script src="../css/details.css"></script>
+
+
+
+    <script src="../js/details.js"></script>
 </body>
 </html>

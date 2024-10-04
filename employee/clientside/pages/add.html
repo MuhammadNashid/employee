@@ -2,28 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/add.css">
 </head>
 <body>
     
-    <div class="main1">
-        <div id="display">
-            <!-- <div class="sub1">
-    <input class="txt" type="text" id="eid" placeholder="Employee Id">
-    <input class="txt" type="text" id="name" placeholder="Name">
-    <input class="txt" type="text" id="des" placeholder="Designation">
-    <input class="txt" type="text" id="phone" placeholder="Phone Number">
-    <input class="txt" type="text" id="email" placeholder="Email">
-    <input class="txt" type="text" id="salary" placeholder="Salary">
-    <textarea name="details" id="details" cols="30" rows="10" placeholder="Enter your Details" class="tarea"></textarea>
-    
-</div>  -->
-<button class="btn" type="button"><a href="http://localhost:3000/edit">EDIT</a></button>
-<button type="submit" class="btn2">DELETE</button> 
+    <h1>ADD EMPLOYEE</h1>
+    <div class="rightPanel">
+        <div class="smallText">
+          
+          <div class="detail">
+            <form action="/submit" method="POST"><br>
+        <td>EID:</td><br>
+        <td><input type="text" class="txt" name="EID" id="EID" placeholder="Employee id"></td><br>
+       </tr>
+       <tr>
+        <td>NAME:</td><br>
+        <td><input type="text" class="txt" name="NAME" id="NAME" placeholder="Name"></td><br>
+       </tr>
+       <tr>
+        <td>DESIGNATION:</td><br>
+            <select name="DES" id="des">
+                <option value="mern">MERNSTACK</option>
+                <option value="flutter">FLUTTER</option>
+                <option value="python">PYTHON</option>
+                <option value="networking">NETWORKING</option>
+            </select>
+       </tr>
+       <tr>
+        <td>PHONE:</td><br>
+        <td><input type="text" class="txt" name="PHONE" id="PHONE" placeholder="Phone number"></td><br>
+       </tr>
+       <tr>
+        <td>EMAIL:</td><br>
+        <td><input type="text" class="txt" name="EMAIL" id="EMAIL" placeholder="Emailid"></td><br>
+       </tr>
+       <tr>
+        <td>SALARY:</td><br>
+        <td><input type="text" class="txt" name="SALARY" id="SALARY" placeholder="Salary"></td><br>
+       </tr>
+       <tr>
+        <td>EXPERIENCE:</td><br>
+        <input type="text" class="txt" name="EXPERIENCE" id="EXPERIENCE" placeholder="EXPERIENCE">
+       </tr><br><br>
+       <button type="submit" class="btn1">SUBMIT</button>
+    </form>
 </div>
 </div>
+</div>
 
 
 
@@ -31,6 +57,6 @@
 
 
 
-    <script src="../js/index.js"></script>
+    <!-- <script src="../js/add.js"></script> -->
 </body>
 </html>
