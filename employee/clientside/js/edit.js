@@ -1,44 +1,65 @@
-async function editEmployeeData() {
-    const params = new URLSearchParams(window.location.search);
-    const empId = params.get('empId');
+let url=window.location.href;
+let urlparams=new URLSearchParams(url.split("?")[1])
+let id=urlparams.get("id")
 
-    const res = await fetch('http://localhost:3000/employee/' + eId);
-    const employee = await res.json();
+async function editemployi() {
+    const res=await fetch(`http://localhost:3000/getData`)
+    const data=await res.json()
+    datas=data[id]
+    console.log(id);   
+str=``
+str+=  `
+    <div class="card">
+<div class="lside">
+   <img src="../images/img.png" alt="">
 
-    // Populate the form with the current employee data
-    document.getElementById('EID').value = employee.eId;
-    document.getElementById('NAME').value = employee.name;
-    document.getElementById('DES').value = employee.des;
-    document.getElementById('salary').value = employee.salary;
-    document.getElementById('exp').value = employee.exp;
-    document.getElementById('email').value = employee.email;
-    document.getElementById('phone').value = employee.phone;
+</div>
+<div class="rside">
+<input type="text"  placeholder="id" value="${datas.id}" id="id">
+<input type="text"  placeholder="name"  value="${datas.name}" id="name">
+    <input type="text"  placeholder="designation"  value="${datas.designation}" id="designation">
+    <input type="text"  placeholder="salary"  value="${datas.salary}" id="salary">
+
+    <input type="text"  placeholder="experience" value="${datas.experience}" id="experience">
+    <input type="text"  placeholder="phone"  value="${datas.phone}" id="phone">
+    <input type="text"  placeholder="EMAIL"  value="${datas.email}" id="email">
+    <button onclick="save('${datas._id}')">SAVE</button>
+</div>
+</div>
+    
+    
+    `
+document.getElementById("mainside").innerHTML=str
+
 }
 
-document.getElementById('edit-form').addEventListener('submit', async (event) => {
-    event.preventDefault();
 
-    const empId = document.getElementById('eId').value;
-    const formData = new URLSearchParams(new FormData(event.target)).toString();
+async function save(a) {
+    console.log(a);
+    
+    const id=document.getElementById(`id`).value;
+    
+    const name=document.getElementById(`name`).value;
+    const designation=document.getElementById(`designation`).value;
+    const salary=document.getElementById(`salary`).value;
+    const experience=document.getElementById(`experience`).value;
+    const phone=document.getElementById(`phone`).value;
+    const email=document.getElementById(`email`).value;
+    console.log(name,designation,salary,experience,phone,email);
+    const data = { a,id, name, designation, salary, experience, phone, email,};
+    const res=await fetch(`http://localhost:3000/update`,{
+        method:"PUT",
+        headers:{"Content-Type":"text/json"},
+        body:JSON.stringify(data)
+    }) 
+    if (res.status==200) {
+        editemployi()
+        window.location.href="http://localhost:3000/"   
 
-    const res = await fetch('http://localhost:3000/updateEmployee/' + eId, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: formData,
-    });
-
-    if (res.ok) {
-        alert('Employee updated successfully');
-        window.location.href = '/';
-    } else {
-        alert('Failed to update employee');
+    }else{
+        alert("faild")
     }
-});
+    
+    }
 
-function goBack() {
-    window.history.back();
-}
-
-editEmployeeData();
+editemployi()

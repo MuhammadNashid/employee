@@ -1,30 +1,30 @@
 
-async function getEmployees(){
-  const res = await fetch('http://localhost:3000/getemployees');
-  const data = await res.json();
+async function getEmploye() {
+  const res=await fetch("http://localhost:3000/getData")
+  const data=await res.json()
   console.log(data);
-  let str = '';
-  data.map((datas)=>{
-    str+=`
-    <div class="card">
-        <img src="../images/img.png" alt="alan" style="width:100%">
-        <div>EID:${datas.EID}</div>
-        <div>NAME:${datas.NAME}</div>
-        <div class="title">DES:${datas.DES}</div>
-        <div>PHONE:${datas.PHONE}</div>
-       
-        
-        <div><button class="btn" onclick="location.href='http://localhost:3000/info.html?EID=${datas.EID}'">INFO</button></div>
-      </div>`
-  })
-  document.getElementById("display").innerHTML=str
+
+  str=``
+ data.map((data,index)=>{
+  
+  str+=`
+  
+  <div class="card">
+        <div class="imagediv">
+<img src="../images/img.png" alt="">
+
+        </div>
+        <div class="bottom">
+            <div class="id"><span class="span">id:</span>${data.id}</div>
+            <div class="name"><span class="span">name:</span>${data.name}</div>
+            <div class="Desig"><span class="span">designation:</span>${data.designation}</div>
+        <div class="btn"><button><a href="http://localhost:3000/info?id=${index}">INFO</button></a></div>
+        </div>
+    </div>
+`
+ })
+  
+ document.getElementById("mainside").innerHTML=str
 }
 
-
-
-
-
-
-
-
-getEmployees()
+getEmploye()
